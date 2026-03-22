@@ -1,0 +1,31 @@
+# --- Project Specific Data ---
+# Ignore all generated user data and transaction logs
+*_data.txt
+*_transactions.txt
+
+# --- Python Environment ---
+# Ignore compiled Python files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore virtual environments
+venv/
+env/
+ENV/
+.env
+
+# --- Operating System Files ---
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# --- IDE Settings ---
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
