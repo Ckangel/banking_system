@@ -10,12 +10,13 @@ class SavingsAccount(BankAccount):
         if amount <= 0:
             print("Error: Withdrawal must be positive.")
             return False
-            
+
         # Rule: Balance cannot go below MIN_BALANCE
         if self._balance - amount >= self.MIN_BALANCE:
             self._balance -= amount
+            self._log_transaction("Withdrawal", amount)
             print(f"Savings Withdrawal Successful: ${amount:.2f}")
             return True
         else:
-            print(f"Denied! Savings accounts must maintain a ${self.MIN_BALANCE} minimum.")
+            print(f"Denied! Savings accounts must maintain a ${self.MIN_BALANCE:.2f} minimum.")
             return False

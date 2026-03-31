@@ -2,7 +2,7 @@
 
 A robust, terminal-based banking application demonstrating advanced Object-Oriented Programming (OOP) principles, data persistence, and business logic validation.
 
-## 🚀 Features
+## Features
 
 • Account Diversity: Supports both Savings and Current accounts with unique financial rules.
 • Business Logic Validation: * Savings: Minimum balance enforcement of $500.
@@ -12,7 +12,7 @@ o Current: Overdraft protection up to $1,000.
 • Audit Trail: Timestamped logging of every deposit and withdrawal.
 ________________________________________
 
-## 🛠️ Core OOP Concepts Applied
+## Core OOP Concepts Applied
 
 This project was built to showcase industry-standard coding patterns:
 Concept Implementation in this Project
@@ -22,9 +22,8 @@ Encapsulation Protected members (_balance,_history) prevent direct external tamp
 Polymorphism The withdraw() method is overridden in child classes to apply specific banking rules.
 ________________________________________
 
-## 📂 Project Structure
+## Project Structure
 
-Plaintext
 bank_system/
 ├── main.py                # App entry point & User Interface logic
 ├── models/
@@ -35,11 +34,11 @@ bank_system/
 └── [User]_data.txt        # Generated persistence files
 ________________________________________
 
-## ⚙️ Installation & Usage
+## Installation & Usage
 
 1. Clone the repository:
 Bash
-git clone <https://github.com/yourusername/bank-system-python.git>
+git clone <https://github.com/ckangel/bank-system-python.git>
 cd bank-system-python
 2. Run the application:
 Bash
@@ -48,7 +47,7 @@ python main.py
 
 ________________________________________
 
-## 📈 Future Enhancements (Roadmap)
+## Future Enhancements (Roadmap)
 
 [ ] Database Integration: Move from .txt files to SQLite for better data handling.
 [ ] GUI: Implement a graphical interface using Tkinter or PyQt.
