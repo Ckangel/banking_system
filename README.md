@@ -1,101 +1,56 @@
-# Online Banking System V2.0.2
+# Bank Account Management System (Python OOP)
 
-This is an Online Banking Concept created using Django Web Framework.
+A robust, terminal-based banking application demonstrating advanced Object-Oriented Programming (OOP) principles, data persistence, and business logic validation.
 
+## 🚀 Features
 
-## Features
+• Account Diversity: Supports both Savings and Current accounts with unique financial rules.
+• Business Logic Validation: * Savings: Minimum balance enforcement of $500.
+o Current: Overdraft protection up to $1,000.
+• Automatic Persistence: Saves user data and transaction logs to unique .txt files.
+• Secure Session Handling: A login system that restores account states and history upon return.
+• Audit Trail: Timestamped logging of every deposit and withdrawal.
+________________________________________
 
-* Create Bank Account.
-* Deposit & Withdraw Money
-* Bank Account Type Support (e.g. Current Account, Savings Account)
-* Interest calculation depending on the Bank Account type
-* Transaction report with a date range filter 
-* See balance after every transaction in the Transaction Report
-* Calculate Monthly Interest Using Celery Scheduled tasks
-* More efficient and accurate interest calculation and balance update
-* Ability to add Minimum and Maximum Transaction amount restriction
-* Modern UI with Tailwind CSS
+## 🛠️ Core OOP Concepts Applied
 
+This project was built to showcase industry-standard coding patterns:
+Concept Implementation in this Project
+Abstraction Used abc.ABC for the BankAccount base class to ensure generic accounts cannot be instantiated.
+Inheritance SavingsAccount and CurrentAccount inherit core logic from the base class to reduce code redundancy.
+Encapsulation Protected members (_balance,_history) prevent direct external tampering with financial data.
+Polymorphism The withdraw() method is overridden in child classes to apply specific banking rules.
+________________________________________
 
-## Prerequisites
+## 📂 Project Structure
 
-Be sure you have the following installed on your development machine:
+Plaintext
+bank_system/
+├── main.py                # App entry point & User Interface logic
+├── models/
+│   ├── __init__.py
+│   ├── base_account.py    # Abstract Base Class & persistence logic
+│   ├── savings_account.py # Savings logic & constants
+│   └── current_account.py # Current logic & overdraft rules
+└── [User]_data.txt        # Generated persistence files
+________________________________________
 
-+ Python >= 3.7
-+ Redis Server
-+ Git
-+ pip
-+ Virtualenv (virtualenvwrapper is recommended)
+## ⚙️ Installation & Usage
 
-## Requirements
+1. Clone the repository:
+Bash
+git clone <https://github.com/yourusername/bank-system-python.git>
+cd bank-system-python
+2. Run the application:
+Bash
+python main.py
+3. Follow the prompts: Enter a username to login or create a new account. Your progress is saved automatically upon selecting Save & Exit.
 
-+ celery==4.4.7
-+ Django==3.2
-+ django-celery-beat==2.0.0
-+ python-dateutil==2.8.1
-+ redis==3.5.3
+________________________________________
 
-## Install Redis Server
+## 📈 Future Enhancements (Roadmap)
 
-[Redis Quick Start](https://redis.io/topics/quickstart)
-
-Run Redis server
-```bash
-redis-server
-```
-
-## Project Installation
-
-To setup a local development environment:
-
-Create a virtual environment in which to install Python pip packages. With [virtualenv](https://pypi.python.org/pypi/virtualenv),
-```bash
-virtualenv venv            # create a virtualenv
-source venv/bin/activate   # activate the Python virtualenv 
-```
-
-or with [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/),
-```bash
-mkvirtualenv -p python3 {{project_name}}   # create and activate environment
-workon {{project_name}}   # reactivate existing environment
-```
-
-Clone GitHub Project,
-```bash
-git@github.com:saadmk11/banking-system.git
-
-cd banking-system
-```
-
-Install development dependencies,
-```bash
-pip install -r requirements.txt
-```
-
-Migrate Database,
-```bash
-python manage.py migrate
-```
-
-Run the web application locally,
-```bash
-python manage.py runserver # 127.0.0.1:8000
-```
-
-Create Superuser,
-```bash
-python manage.py createsuperuser
-```
-
-Run Celery
-(Different Terminal Window with Virtual Environment Activated)
-```bash
-celery -A banking_system worker -l info
-
-celery -A banking_system beat -l info
-```
-
-## Images:
-![alt text](https://i.imgur.com/FvgmEJL.png)
-#
-![alt text](https://i.imgur.com/aWzj44Y.png)
+[ ] Database Integration: Move from .txt files to SQLite for better data handling.
+[ ] GUI: Implement a graphical interface using Tkinter or PyQt.
+[ ] Transfer Logic: Allow users to transfer funds between different account holders.
+[ ] Encryption: Hash passwords and encrypt sensitive file data.

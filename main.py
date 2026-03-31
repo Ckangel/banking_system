@@ -37,3 +37,20 @@ def sprint_2_test():
 
 if __name__ == "__main__":
     sprint_2_test()
+
+print ("--------------------------------------------------------------------------------------------")
+
+from models.savings_account import SavingsAccount
+
+def sprint_3_test():
+    print("--- Sprint 3: Persistence Test ---")
+    user_acc = SavingsAccount("Deepak", 1000)
+    
+    user_acc.deposit(500)
+    user_acc.withdraw(200)
+    
+    # This should create 'Deepak_data.txt' in your folder
+    user_acc.save_to_file()
+
+if __name__ == "__main__":
+    sprint_3_test()
