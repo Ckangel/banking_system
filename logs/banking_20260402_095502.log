@@ -1,0 +1,20 @@
+2026-04-02 09:55:02 - BankingSystem - INFO - [info] - === Interactive Banking CLI Started ===
+2026-04-02 09:55:32 - BankingSystem - DEBUG - [debug] - Name validation passed: Emmanuel Chidiebere Nzeh
+2026-04-02 09:55:32 - BankingSystem - DEBUG - [debug] - Balance validation passed: $600.00
+2026-04-02 09:55:32 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
+2026-04-02 09:55:32 - BankingSystem - INFO - [info] - Account created successfully - Name: Emmanuel Chidiebere Nzeh, Initial Balance: $600.00
+2026-04-02 09:55:32 - BankingSystem - INFO - [info] - New account created via CLI: Emmanuel Chidiebere Nzeh_savings
+2026-04-02 09:55:38 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:55:43 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:55:45 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:56:02 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:56:19 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:56:21 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:56:23 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:56:24 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:56:28 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:56:30 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:56:33 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:57:25 - BankingSystem - INFO - [info] - Listed all 1 accounts via CLI
+2026-04-02 09:57:34 - BankingSystem - WARNING - [warning] - Invalid menu choice: clear
+2026-04-02 09:57:37 - BankingSystem - INFO - [info] - === Interactive Banking CLI Closed ===

@@ -1,0 +1,49 @@
+2026-04-02 09:34:34 - BankingSystem - INFO - [info] - === Sprint 1: Architecture Test ===
+2026-04-02 09:34:34 - BankingSystem - DEBUG - [debug] - Name validation passed: Deepak
+2026-04-02 09:34:34 - BankingSystem - DEBUG - [debug] - Balance validation passed: $1000.00
+2026-04-02 09:34:34 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
+2026-04-02 09:34:34 - BankingSystem - INFO - [info] - Account created successfully - Name: Deepak, Initial Balance: $1000.00
+2026-04-02 09:34:34 - BankingSystem - DEBUG - [debug] - Name validation passed: Amit
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Balance validation passed: $500.00
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
+2026-04-02 09:34:35 - BankingSystem - INFO - [info] - Account created successfully - Name: Amit, Initial Balance: $500.00
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Account Info - Deepak: Savings Account, Balance: $1000
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Account Info - Amit: Current Account, Balance: $500
+2026-04-02 09:34:35 - BankingSystem - INFO - [info] - === Sprint 2: Validation Test ===
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Name validation passed: Deepak
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Balance validation passed: $600.00
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
+2026-04-02 09:34:35 - BankingSystem - INFO - [info] - Account created successfully - Name: Deepak, Initial Balance: $600.00
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Amount validation passed: $200.00 for withdrawal
+2026-04-02 09:34:35 - BankingSystem - WARNING - [warning] - Withdrawal would result in balance below minimum $500.00.
+2026-04-02 09:34:35 - BankingSystem - WARNING - [transaction] - TRANSACTION | Account: Deepak | Action: Withdrawal | Amount: $200.00 | Balance: $600.00 | Status: FAILED
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Savings withdrawal attempt: amount=200, success=False
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Name validation passed: Amit
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Balance validation passed: $100.00
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
+2026-04-02 09:34:35 - BankingSystem - INFO - [info] - Account created successfully - Name: Amit, Initial Balance: $100.00
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Amount validation passed: $500.00 for withdrawal
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Overdraft withdrawal validation passed.
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Overdraft check: $-400.00 >= -$1000.00 = True
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Transaction integrity verified for withdrawal: {'calculation_correct': True}
+2026-04-02 09:34:35 - BankingSystem - INFO - [transaction] - TRANSACTION | Account: Amit | Action: Withdrawal | Amount: $500.00 | Balance: $-400.00 | Status: SUCCESS
+2026-04-02 09:34:35 - BankingSystem - WARNING - [warning] - Overdraft being used - Balance: $-400.00
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Current overdraft withdrawal: amount=500, success=True
+2026-04-02 09:34:35 - BankingSystem - INFO - [info] - === Sprint 3: Persistence Test ===
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Name validation passed: Deepak
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Balance validation passed: $1000.00
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
+2026-04-02 09:34:35 - BankingSystem - INFO - [info] - Account created successfully - Name: Deepak, Initial Balance: $1000.00
+2026-04-02 09:34:35 - BankingSystem - INFO - [info] - Performing deposit transaction
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Amount validation passed: $500.00 for deposit
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Transaction integrity verified for deposit: {'calculation_correct': True}
+2026-04-02 09:34:35 - BankingSystem - INFO - [transaction] - TRANSACTION | Account: Deepak | Action: Deposit | Amount: $500.00 | Balance: $1500.00 | Status: SUCCESS
+2026-04-02 09:34:35 - BankingSystem - INFO - [info] - Performing withdrawal transaction
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Amount validation passed: $200.00 for withdrawal
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Savings withdrawal validation passed.
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Minimum balance check: $1300.00 >= $500.00 = True
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Transaction integrity verified for withdrawal: {'calculation_correct': True}
+2026-04-02 09:34:35 - BankingSystem - INFO - [transaction] - TRANSACTION | Account: Deepak | Action: Withdrawal | Amount: $200.00 | Balance: $1300.00 | Status: SUCCESS
+2026-04-02 09:34:35 - BankingSystem - INFO - [info] - Saving account data to file
+2026-04-02 09:34:35 - BankingSystem - DEBUG - [debug] - Account state verification for Deepak: {'has_name': True, 'has_valid_balance': True, 'has_balance_value': True, 'has_account_type': True}
+2026-04-02 09:34:35 - BankingSystem - INFO - [info] - Data saved successfully to Deepak_data.txt

@@ -1,0 +1,7 @@
+2026-04-02 09:50:44 - BankingSystem - INFO - [info] - === Interactive Banking CLI Started ===
+2026-04-02 09:51:19 - BankingSystem - DEBUG - [debug] - Name validation passed: Emmanuel Chidiebere Nzzeh
+2026-04-02 09:51:19 - BankingSystem - DEBUG - [debug] - Balance validation passed: $350.00
+2026-04-02 09:51:19 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
+2026-04-02 09:51:19 - BankingSystem - INFO - [info] - Account created successfully - Name: Emmanuel Chidiebere Nzzeh, Initial Balance: $350.00
+2026-04-02 09:51:19 - BankingSystem - INFO - [info] - New account created via CLI: Emmanuel Chidiebere Nzzeh_savings
+2026-04-02 09:54:22 - BankingSystem - INFO - [info] - === Interactive Banking CLI Closed ===

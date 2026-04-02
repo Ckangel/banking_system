@@ -1,0 +1,9 @@
+2026-04-02 10:00:16 - BankingSystem - DEBUG - [debug] - Name validation passed: John Doe
+2026-04-02 10:00:16 - BankingSystem - DEBUG - [debug] - Balance validation passed: $5000.00
+2026-04-02 10:00:16 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
+2026-04-02 10:00:16 - BankingSystem - INFO - [info] - Account created successfully - Name: John Doe, Initial Balance: $5000.00
+2026-04-02 10:00:16 - BankingSystem - DEBUG - [debug] - Name validation passed: Jane Smith
+2026-04-02 10:00:16 - BankingSystem - DEBUG - [debug] - Balance validation passed: $3000.00
+2026-04-02 10:00:16 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
+2026-04-02 10:00:16 - BankingSystem - INFO - [info] - Account created successfully - Name: Jane Smith, Initial Balance: $3000.00
+2026-04-02 10:00:16 - BankingSystem - INFO - [info] - Listed all 2 accounts via CLI

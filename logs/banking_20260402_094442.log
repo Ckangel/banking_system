@@ -1,0 +1,19 @@
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Name validation passed: Alice
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Balance validation passed: $2000.00
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
+2026-04-02 09:44:42 - BankingSystem - INFO - [info] - Account created successfully - Name: Alice, Initial Balance: $2000.00
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Name validation passed: Bob
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Balance validation passed: $1500.00
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
+2026-04-02 09:44:42 - BankingSystem - INFO - [info] - Account created successfully - Name: Bob, Initial Balance: $1500.00
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Amount validation passed: $300.00 for deposit
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Transaction integrity verified for deposit: {'calculation_correct': True}
+2026-04-02 09:44:42 - BankingSystem - INFO - [transaction] - TRANSACTION | Account: Alice | Action: Deposit | Amount: $300.00 | Balance: $2300.00 | Status: SUCCESS
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Amount validation passed: $150.00 for withdrawal
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Savings withdrawal validation passed.
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Minimum balance check: $2150.00 >= $500.00 = True
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Transaction integrity verified for withdrawal: {'calculation_correct': True}
+2026-04-02 09:44:42 - BankingSystem - INFO - [transaction] - TRANSACTION | Account: Alice | Action: Withdrawal | Amount: $150.00 | Balance: $2150.00 | Status: SUCCESS
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Amount validation passed: $25.00 for balance addition
+2026-04-02 09:44:42 - BankingSystem - DEBUG - [debug] - Transaction integrity verified for deposit: {'calculation_correct': True}
+2026-04-02 09:44:42 - BankingSystem - INFO - [transaction] - TRANSACTION | Account: Alice | Action: Balance Addition | Amount: $25.00 | Balance: $2175.00 | Status: SUCCESS
