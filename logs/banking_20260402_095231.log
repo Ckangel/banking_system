@@ -1,8 +1,0 @@
-2026-04-02 09:52:31 - BankingSystem - DEBUG - [debug] - Name validation passed: Alice Johnson
-2026-04-02 09:52:31 - BankingSystem - DEBUG - [debug] - Balance validation passed: $5000.00
-2026-04-02 09:52:31 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
-2026-04-02 09:52:31 - BankingSystem - INFO - [info] - Account created successfully - Name: Alice Johnson, Initial Balance: $5000.00
-2026-04-02 09:52:31 - BankingSystem - DEBUG - [debug] - Name validation passed: Bob Smith
-2026-04-02 09:52:31 - BankingSystem - DEBUG - [debug] - Balance validation passed: $3000.00
-2026-04-02 09:52:31 - BankingSystem - DEBUG - [debug] - Account creation verification: [('Account Name', True), ('Initial Balance', True)]
-2026-04-02 09:52:31 - BankingSystem - INFO - [info] - Account created successfully - Name: Bob Smith, Initial Balance: $3000.00
