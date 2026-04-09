@@ -1,101 +1,77 @@
-# Online Banking System V2.0.2
+# 🏦 Secure Python Banking System (GUI)
 
-This is an Online Banking Concept created using Django Web Framework.
+A robust, Object-Oriented banking application featuring a Streamlit web interface, SQLite persistence, and SHA-256 password security. This project demonstrates advanced Python concepts including Abstraction, Inheritance, and Multi-threaded Database management.
 
+## 🚀 Key Features
 
-## Features
+- **Modern GUI:** Interactive web interface powered by Streamlit.
+- **Secure Authentication:** User login system with SHA-256 password hashing.
+- **Persistent Storage:** Full transaction history and account balances stored in SQLite.
+- **OOP Architecture:** Uses abstract base classes to handle unique logic for Savings and Current accounts.
+- **Real-time Analytics:** Visual financial overview with dynamic bar charts.
 
-* Create Bank Account.
-* Deposit & Withdraw Money
-* Bank Account Type Support (e.g. Current Account, Savings Account)
-* Interest calculation depending on the Bank Account type
-* Transaction report with a date range filter 
-* See balance after every transaction in the Transaction Report
-* Calculate Monthly Interest Using Celery Scheduled tasks
-* More efficient and accurate interest calculation and balance update
-* Ability to add Minimum and Maximum Transaction amount restriction
-* Modern UI with Tailwind CSS
+---
 
+## 📂 Project Structure
 
-## Prerequisites
-
-Be sure you have the following installed on your development machine:
-
-+ Python >= 3.7
-+ Redis Server
-+ Git
-+ pip
-+ Virtualenv (virtualenvwrapper is recommended)
-
-## Requirements
-
-+ celery==4.4.7
-+ Django==3.2
-+ django-celery-beat==2.0.0
-+ python-dateutil==2.8.1
-+ redis==3.5.3
-
-## Install Redis Server
-
-[Redis Quick Start](https://redis.io/topics/quickstart)
-
-Run Redis server
-```bash
-redis-server
+```text
+banking_system/
+├── app.py                # Main Streamlit GUI Entry Point
+├── main.py               # Terminal/CLI Version Entry Point
+├── bank_system.db        # SQLite Database (Auto-generated)
+├── models/               # Business Logic Layer
+│   ├── __init__.py
+│   ├── base_account.py   # Abstract Base Class (Encapsulation/Logic)
+│   ├── savings_account.py# Savings Logic (Min Balance rules)
+│   ├── current_account.py# Current Logic (Overdraft rules)
+│   └── db_manager.py     # SQL Persistence Layer
+└── requirements.txt      # Project Dependencies
 ```
 
-## Project Installation
+---
 
-To setup a local development environment:
+## 🛠️ Tech Stack
 
-Create a virtual environment in which to install Python pip packages. With [virtualenv](https://pypi.python.org/pypi/virtualenv),
-```bash
-virtualenv venv            # create a virtualenv
-source venv/bin/activate   # activate the Python virtualenv 
-```
+- **Language:** Python 3.10+
+- **Frontend:** Streamlit
+- **Database:** SQLite3
+- **Security:** Hashlib (SHA-256)
 
-or with [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/en/latest/),
-```bash
-mkvirtualenv -p python3 {{project_name}}   # create and activate environment
-workon {{project_name}}   # reactivate existing environment
-```
+---
 
-Clone GitHub Project,
-```bash
-git@github.com:saadmk11/banking-system.git
+## ⚙️ Installation & Setup
 
-cd banking-system
-```
+1. **Clone the repository:**
 
-Install development dependencies,
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   git clone [https://github.com/ckangel/banking-system.git](https://github.com//banking-system.git)
+   cd banking-system
+   ```
 
-Migrate Database,
-```bash
-python manage.py migrate
-```
+2. **Install Dependencies:**
 
-Run the web application locally,
-```bash
-python manage.py runserver # 127.0.0.1:8000
-```
+   ```bash
+   pip install streamlit
+   ```
 
-Create Superuser,
-```bash
-python manage.py createsuperuser
-```
+3. **Run the Application:**
+   To launch the Web GUI:
 
-Run Celery
-(Different Terminal Window with Virtual Environment Activated)
-```bash
-celery -A banking_system worker -l info
+   ```bash
+   python -m streamlit run app.py
+   ```
 
-celery -A banking_system beat -l info
-```
+   *To run the legacy Terminal version:* `python main.py`
 
-## Images:
-![alt text](https://i.imgur.com/FvgmEJL.png)
-#
-![alt text](https://i.imgur.com/aWzj44Y.png)
+---
+
+## 🛡️ Security Implementation
+
+This system does not store plain-text passwords. Every password is "salted" and hashed using the SHA-256 algorithm. When a user logs in, their input is hashed and compared against the stored hash in the database, ensuring that even if the database is compromised, user credentials remain secure.
+
+---
+
+## 📊 Account Logic
+
+- **Savings Account:** Enforces a minimum balance of $500. Withdrawals that drop below this limit are automatically denied.
+- **Current Account:** Features a $1,000 overdraft protection, allowing users to spend slightly beyond their current balance.

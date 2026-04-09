@@ -1,4 +1,3 @@
-import os
 from abc import ABC, abstractmethod
 from models.db_manager import db  # Ensure db_manager.py exists in your models folder
 
