@@ -3,6 +3,10 @@ from models.base_account import BankAccount
 class CurrentAccount(BankAccount):
     OVERDRAFT_LIMIT = 1000.00
 
+    def __init__(self, name, balance):
+        # Pass name and balance up to the BankAccount parent
+        super().__init__(name, balance)
+
     def account_type(self):
         return "Current Account"
 
@@ -11,13 +15,10 @@ class CurrentAccount(BankAccount):
             print("Error: Withdrawal must be positive.")
             return False
 
-        # Rule: Balance can go negative down to -OVERDRAFT_LIMIT
         if (self._balance + self.OVERDRAFT_LIMIT) >= amount:
             self._balance -= amount
-            print(f"Current Withdrawal Successful: ${amount:.2f}")
-            if self._balance < 0:
-                print(f"Warning: You are now using your overdraft! (Balance: ${self._balance:.2f})")
+            self._log_transaction("Withdrawal", amount)
             return True
         else:
-            print(f"Denied! Withdrawal exceeds your ${self.OVERDRAFT_LIMIT} overdraft limit.")
+            print("Denied! Exceeds overdraft limit.")
             return False
