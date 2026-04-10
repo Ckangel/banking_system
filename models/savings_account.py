@@ -3,22 +3,16 @@ from models.base_account import BankAccount
 class SavingsAccount(BankAccount):
     MIN_BALANCE = 500.00
 
-    def __init__(self, name, balance):
+    def __init__(self, name, balance, acc_number=None):
         # Pass name and balance up to the BankAccount parent
-        super().__init__(name, balance)
+        super().__init__(name, balance, acc_number)
 
     def account_type(self):
         return "Savings Account"
 
     def withdraw(self, amount):
-        if amount <= 0:
-            print("Error: Withdrawal must be positive.")
-            return False
-            
-        if (self._balance - amount) >= self.MIN_BALANCE:
+        if 0 < amount <= self._balance - 500:
             self._balance -= amount
-            self._log_transaction("Withdrawal", amount)
+            self._log_transaction("Withdrawal", -amount)
             return True
-        else:
-            print(f"Denied! Minimum balance of ${self.MIN_BALANCE} required.")
-            return False
+        return False
