@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#2ecc71"          # Your bank's signature green
+backgroundColor = "#0e1117"       # Deep dark background
+secondaryBackgroundColor = "#1f2937" # Lighter dark for sidebars/widgets
+textColor = "#fafafa"             # Off-white for high readability
+font = "sans serif"
