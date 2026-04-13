@@ -17,13 +17,8 @@ class BankAccount(ABC):
     @abstractmethod
     def withdraw(self, amount): pass
 
-    def add_balance(self, amount):
-        """Add balance directly (e.g., for interest, admin adjustments)."""
-        try:
-            # Validate amount
-            AccountValidator.validate_amount(amount, operation="balance addition")
-            
-            previous_balance = self._balance
+    def deposit(self, amount):
+        if amount > 0:
             self._balance += amount
             self._log_transaction("Deposit", amount)
             return True

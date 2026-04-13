@@ -1,7 +1,4 @@
 from models.base_account import BankAccount
-from logger import get_logger
-from validators import AccountValidator, ValidationError
-from verifiers import TransactionVerifier
 
 class CurrentAccount(BankAccount):
     """Current account that supports an overdraft up to a fixed limit."""
