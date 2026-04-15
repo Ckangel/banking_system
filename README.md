@@ -55,7 +55,7 @@ banking_system/
    ```
 
 3. **Run the Application:**
-   To launch the Web GUI:
+   To launch the Web GUI: <https://bankingsystem-fwlm7haug8mo5jtaierpeg.streamlit.app>
 
    ```bash
    python -m streamlit run app.py
